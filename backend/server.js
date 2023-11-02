@@ -14,6 +14,8 @@ const PORT = process.env.PORT || 3500
 
 const user_identifier = require('./routes/user_identifierRoutes');
 const user_intensity = require('./routes/user_intensity');
+const face_ditectoin = require('./routes/face_ditectoin');
+const voice_to_voice = require('./routes/voice_to_voice');
 
 // console.log(process.env.NODE_ENV)
 
@@ -41,6 +43,10 @@ app.use('/answer', require('./routes/answerRoutes'))
 app.use('/api/student', user_identifier);
 
 app.use('/api/student', user_intensity);
+
+app.use('/api/student', face_ditectoin);
+
+app.use('/api/student', voice_to_voice);
 
 
 
